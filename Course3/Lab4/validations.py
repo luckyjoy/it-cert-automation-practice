@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 
-
-
 import re
-
-
 
 def validate_user(username, minlen):
 
@@ -17,8 +13,7 @@ def validate_user(username, minlen):
     if minlen < 1:
 
         raise ValueError("minlen must be at least 1")
-
-    
+ 
 
     # Usernames can't be shorter than minlen
 
@@ -41,10 +36,7 @@ def validate_user(username, minlen):
     return True
 
 
-
 print(validate_user("blue.kale", 3)) # True
-
-
 
 print(validate_user(".blue.kale", 3)) # Now False
 
@@ -55,4 +47,6 @@ print(validate_user("_red_quinoa", 4)) # Now False
 print(validate_user("1red_quinoa", 4)) # False (still works)
 
 print(validate_user("!blue.kale", 3)) # False
+
+print(validate_user("bl?ue.kale", 3)) # False
 

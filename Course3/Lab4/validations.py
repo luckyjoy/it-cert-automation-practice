@@ -48,15 +48,11 @@ print(validate_user("blue.kale", 3)) # True
 
 print(validate_user(".blue.kale", 3)) # Now False
 
-
-
 print(validate_user("red_quinoa", 4)) # True
-
-
 
 print(validate_user("_red_quinoa", 4)) # Now False
 
-
-
 print(validate_user("1red_quinoa", 4)) # False (still works)
+
+print(validate_user("!blue.kale", 3)) # False
 
